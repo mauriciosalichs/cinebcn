@@ -1,0 +1,104 @@
+/**
+ * Legal Pages Stylesheet
+ * Applies to: privacy.html, terms.html, cookies.html
+ */
+
+/* ── Page offset to clear fixed navbar ── */
+.section.legal-page {
+    padding-top: 100px;
+}
+
+/* ── Main content container ── */
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+}
+
+/* ── Headings ── */
+.legal-content h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.legal-content h2 {
+    font-size: 1.15rem;
+    color: #222;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.legal-content h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+/* ── Body text ── */
+.legal-content p,
+.legal-content li {
+    margin-bottom: 0.8rem;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+    padding-left: 1.5rem;
+}
+
+/* ── Meta ── */
+.legal-content .last-updated {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* ── Links ── */
+.legal-content a {
+    color: var(--secondary-color, #6c63ff);
+    text-decoration: underline;
+}
+
+.legal-content a:hover {
+    opacity: 0.8;
+}
+
+/* ── Language separator ── */
+.legal-content .lang-separator {
+    border: none;
+    border-top: 2px solid var(--primary-color, #e91e63);
+    margin: 3rem 0;
+}
+
+/* ── Tables (privacy & cookies pages) ── */
+.legal-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.legal-content table th,
+.legal-content table td {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.6rem 1rem;
+    text-align: left;
+    color: #1a1a1a;
+    font-size: 0.93rem;
+}
+
+.legal-content table th {
+    background: rgba(0, 0, 0, 0.04);
+    color: #222;
+    font-weight: 600;
+}

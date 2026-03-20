@@ -1,0 +1,108 @@
+.admin-profiles-page .container {
+    max-width: 1280px;
+}
+
+.admin-profiles-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+}
+
+.admin-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 20, 147, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.admin-users-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-users-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-users-table th {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.admin-users-table tr:hover {
+    background: rgba(255, 20, 147, 0.08);
+}
+
+.admin-status-badge {
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.admin-status-yes {
+    background: rgba(50, 200, 100, 0.2);
+    color: #32c864;
+}
+
+.admin-status-no {
+    background: rgba(255, 50, 50, 0.2);
+    color: #ff4f4f;
+}
+
+.admin-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-edit-form .form-input[readonly] {
+    opacity: 0.7;
+}
+
+.admin-checkbox-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.admin-checkbox-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-meta {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 980px) {
+    .admin-profiles-layout {
+        grid-template-columns: 1fr;
+    }
+}

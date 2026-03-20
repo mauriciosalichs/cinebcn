@@ -1,0 +1,48 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "Title": "Pillion",
+      "Year": "2025",
+      "Rated": "Unrated",
+      "Released": "27 Feb 2026",
+      "Runtime": "106 min",
+      "Genre": "Comedy, Drama, Romance",
+      "Director": "Harry Lighton",
+      "Writer": "Harry Lighton, Adam Mars-Jones",
+      "Actors": "Harry Melling, Alexander Skarsgård, Douglas Hodge",
+      "Plot": "A directionless man is swept off his feet when an enigmatic, impossibly handsome biker takes him on as his submissive.",
+      "PlotES": "Un hombre sin rumbo se enamora perdidamente de un enigmático y guapísimo motorista que lo toma como su sumiso.",
+      "Language": "English",
+      "Country": "United Kingdom, Ireland",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOWEyNTlhYjQtYzNkYi00NTI0LWIzNTYtNjI2Mjg1OGRlMjgxXkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": "85",
+      "imdbRating": "6.8",
+      "imdbVotes": "9,550",
+      "screeningDate": "2026-03-07",
+      "screeningTime": "17:30"
+    },
+    {
+      "id": 2,
+      "Title": "Hoje Eu Quero Voltar Sozinho",
+      "Year": "2014",
+      "Rated": "Not Rated",
+      "Released": "07 Nov 2014",
+      "Runtime": "96 min",
+      "Genre": "Drama, Romance",
+      "Director": "Daniel Ribeiro",
+      "Writer": "Daniel Ribeiro",
+      "Actors": "Ghilherme Lobo, Fabio Audi, Tess Amorim",
+      "Plot": "Leonardo is a blind teenager searching for independence. His everyday life, the relationship with his best friend Giovana, and the way he sees the world change completely with the arrival of Gabriel.",
+      "PlotES": "Leonardo es un adolescente ciego que busca independencia. Su vida cotidiana, la relación con su mejor amiga Giovana y la forma en que ve el mundo cambian por completo con la llegada de Gabriel.",
+      "Language": "Portuguese",
+      "Country": "Brazil",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ5NjYxODk2NF5BMl5BanBnXkFtZTgwOTgyNTU4MjE@._V1_SX300.jpg",
+      "Metascore": "71",
+      "imdbRating": "7.9",
+      "imdbVotes": "28,984",
+      "screeningDate": "2026-04-11",
+      "screeningTime": "11:20"
+    }
+  ]
+}

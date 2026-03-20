@@ -1,0 +1,30 @@
+{
+  "location": {
+    "name": "Fundació Privada Enllaç",
+    "url": "https://fundacioenllac.cat/es/inicio/",
+    "address": "Carrer del Rosselló, 328, Eixample, 08025 Barcelona",
+    "mapUrl": "https://www.google.com/maps?q=41.3874,2.1686&z=15&output=embed"
+  },
+  "contact": {
+    "email": "contacto@cinelabcn.com",
+    "social": {
+      "instagram": "https://instagram.com/cinelabbcn",
+      "facebook": "https://facebook.com/cinelabbcn",
+      "twitter": "https://twitter.com/cinelabbcn"
+    }
+  },
+  "theme": {
+    "primaryColor": "#ff1493",
+    "secondaryColor": "#00d4ff",
+    "darkBg": "#0f0f1e",
+    "accentColor": "#ffd700"
+  },
+  "features": {
+    "showCalendar": true,
+    "showList": true,
+    "enableFilters": false,
+    "enableSearch": false,
+    "enableComments": false,
+    "enableBooking": false
+  }
+}
