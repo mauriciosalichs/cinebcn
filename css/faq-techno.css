@@ -1,0 +1,95 @@
+/**
+ * FAQ Page – TECHNO MODE
+ */
+
+/* ── Page offset to clear fixed navbar ── */
+.section.faq-page {
+    padding-top: 100px;
+    background: #000;
+}
+
+/* ── FAQ list container ── */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 2rem;
+}
+
+/* ── Section title ── */
+.faq-page h2 {
+    text-align: center;
+    font-family: var(--font-heading, 'Orbitron', monospace);
+    color: var(--primary-color, #00e5ff);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ── Individual FAQ item ── */
+.faq-item {
+    border-bottom: 1px solid #222;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid #222;
+}
+
+/* ── Question (clickable header) ── */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-body, 'Share Tech Mono', monospace);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--primary-color, #00e5ff);
+    opacity: 1;
+}
+
+.faq-question .faq-icon {
+    flex-shrink: 0;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    color: var(--primary-color, #00e5ff);
+    transition: transform 0.25s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* ── Answer (expandable) ── */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 0 0 1.2rem;
+    color: #888;
+    font-family: var(--font-body, 'Share Tech Mono', monospace);
+    font-size: 0.88rem;
+    line-height: 1.8;
+}

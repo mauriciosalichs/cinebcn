@@ -1,0 +1,43 @@
+/* Film Reel – TECHNO MODE */
+#film-background {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    opacity: var(--film-opacity);
+    filter: grayscale(100%) contrast(1.3) brightness(0.4);
+}
+
+.film-column {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.film-frame {
+    position: relative;
+    overflow: hidden;
+}
+
+.film-frame img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+.film-row {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.film-column {
+    flex-shrink: 0;
+    will-change: transform;
+}

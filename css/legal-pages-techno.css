@@ -1,0 +1,120 @@
+/**
+ * Legal Pages – TECHNO MODE
+ * Applies to: privacy.html, terms.html, cookies.html
+ */
+
+/* ── Page offset to clear fixed navbar ── */
+.section.legal-page {
+    padding-top: 100px;
+    background: #000;
+}
+
+/* ── Main content container ── */
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.8;
+    color: #bbb;
+    font-family: var(--font-body, 'Share Tech Mono', monospace);
+}
+
+/* ── Headings ── */
+.legal-content h1 {
+    text-align: center;
+    font-family: var(--font-heading, 'Orbitron', monospace);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color, #00e5ff);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.legal-content h2 {
+    font-family: var(--font-heading, 'Orbitron', monospace);
+    font-size: 0.9rem;
+    color: var(--primary-color, #00e5ff);
+    margin-top: 2rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.legal-content h3 {
+    font-size: 0.88rem;
+    color: #ccc;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── Body text ── */
+.legal-content p,
+.legal-content li {
+    margin-bottom: 0.8rem;
+    color: #999;
+    font-size: 0.88rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+    padding-left: 1.5rem;
+}
+
+/* ── Meta ── */
+.legal-content .last-updated {
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+/* ── Links ── */
+.legal-content a {
+    color: var(--primary-color, #00e5ff);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.legal-content a:hover {
+    opacity: 0.8;
+    border-bottom-color: var(--primary-color, #00e5ff);
+}
+
+/* ── Language separator ── */
+.legal-content .lang-separator {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 3rem 0;
+}
+
+/* ── Tables (privacy & cookies pages) ── */
+.legal-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.legal-content table th,
+.legal-content table td {
+    border: 1px solid #222;
+    padding: 0.6rem 1rem;
+    text-align: left;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.legal-content table th {
+    background: #0d0d0d;
+    color: var(--primary-color, #00e5ff);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
