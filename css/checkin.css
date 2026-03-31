@@ -1,0 +1,241 @@
+/* =============================================
+   CHECK-IN PAGE STYLES
+   ============================================= */
+
+.checkin-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.checkin-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.checkin-card {
+    background: var(--item-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    padding: 3rem 2rem;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.checkin-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+.checkin-icon-loading {
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--secondary-color);
+}
+
+.checkin-icon-success {
+    background: rgba(76, 175, 80, 0.15);
+    color: var(--success-color);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+.checkin-icon-error {
+    background: rgba(255, 107, 107, 0.15);
+    color: var(--error-color);
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.checkin-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    background: none;
+    -webkit-text-fill-color: unset;
+}
+
+.checkin-title-success {
+    color: var(--success-color) !important;
+}
+
+.checkin-title-error {
+    color: var(--error-color) !important;
+}
+
+.checkin-card p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Movie info inside success card */
+.checkin-movie-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.checkin-movie-poster {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.checkin-movie-info h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.checkin-movie-info p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* Notice bar (e.g. "you weren't pending") */
+.checkin-notice {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 165, 0, 0.12);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    border-radius: 8px;
+    color: #b37700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.checkin-notice i {
+    color: #e69500;
+}
+
+/* Login button for unauthenticated users */
+.checkin-login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.checkin-login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+}
+
+/* =============================================
+   QR MODAL STYLES (admin, on agenda page)
+   ============================================= */
+
+.qr-admin-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-generate-qr {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-generate-qr:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-generate-qr:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.qr-display {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.qr-display canvas,
+.qr-display img {
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.qr-display p {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+.qr-code-id {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.qr-time-window {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    margin-top: 0.3rem;
+}
+
+.qr-not-available {
+    padding: 0.8rem;
+    background: rgba(150, 150, 150, 0.1);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    border-radius: 6px;
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .checkin-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .checkin-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .checkin-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}

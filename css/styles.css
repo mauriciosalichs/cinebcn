@@ -478,7 +478,7 @@ body {
 }
 
 .movie-card {
-    background: rgb(204, 255, 190);
+    background: rgb(55, 255, 0);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -494,23 +494,19 @@ body {
 
 .movie-poster {
     width: 100%;
-    padding-bottom: 150%;
-    position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: #e0e0e0;
 }
 
 .movie-poster img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .movie-card-info {
-    padding: 1.5rem;
+    padding: 0.8rem 1rem 1rem;
 }
 
 .movie-card-title {
@@ -577,13 +573,13 @@ body {
     height: 180px;
     border-radius: 5px;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: #e0e0e0;
 }
 
 .movie-list-poster img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .movie-list-info h3 {
@@ -697,9 +693,74 @@ body {
 
 .movie-detail .movie-poster {
     width: 100%;
-    padding-bottom: 150%;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.movie-detail .movie-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.movie-poster-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.movie-poster-column .movie-poster {
+    border-radius: 10px 10px 0 0;
+}
+
+.movie-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 0.5rem;
+    background: var(--dark-bg);
+    border-radius: 0 0 10px 10px;
+}
+
+.movie-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    flex: 1;
+    text-align: center;
+}
+
+.movie-stat-icon {
+    font-size: 1rem;
+}
+
+.movie-stat-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.movie-stat-label {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.movie-stat.imdb .movie-stat-icon {
+    color: #f5c518;
+}
+
+.movie-stat.metascore .movie-stat-icon {
+    color: #66cc33;
+}
+
+.movie-stat.runtime .movie-stat-icon {
+    color: var(--secondary-color);
 }
 
 .movie-info h2 {
@@ -906,7 +967,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .movie-detail .movie-poster {
+    .movie-poster-column {
         order: -1;
     }
 
@@ -1283,10 +1344,12 @@ html.techno-theme {
 .calendar-month-movies {
     flex: 1;
     min-width: 300px;
-    display: grid;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .calendar-movie-card {
@@ -1294,7 +1357,7 @@ html.techno-theme {
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
-    background: white;
+    background: var(--item-bg);
     border-radius: 10px;
     box-shadow: var(--shadow);
     padding: 1rem;
@@ -1302,6 +1365,7 @@ html.techno-theme {
     cursor: pointer;
     flex: 0 1 calc(50% - 0.75rem);
     min-width: 250px;
+    align-self: flex-start;
 }
 
 .calendar-movie-card:hover {
@@ -1314,11 +1378,10 @@ html.techno-theme {
 }
 
 .calendar-movie-card-poster {
-    width: 20%;
-    height: auto;
-    align-self: stretch;
+    width: auto;
+    height: 180px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
     flex-shrink: 0;
 }
 
@@ -1373,12 +1436,11 @@ html.techno-theme {
 }
 
 .calendar-movie-poster {
-    width: 100%;
     max-width: 250px;
-    height: auto;
+    height: 350px;
     border-radius: 8px;
     margin-bottom: 1.5rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .calendar-movie-info {
@@ -1641,10 +1703,11 @@ html.techno-theme {
     }
 
     .calendar-movie-card-poster {
-        width: 100px;
+        width: auto;
         height: 150px;
         margin-bottom: 0;
         flex-shrink: 0;
+        object-fit: contain;
     }
 
     .calendar-movie-card-info h4 {
