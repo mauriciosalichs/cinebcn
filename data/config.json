@@ -1,9 +1,15 @@
 {
-  "location": {
+  "location1": {
     "name": "Fundació Privada Enllaç",
     "url": "https://fundacioenllac.cat/es/inicio/",
-    "address": "Carrer del Rosselló, 328, Eixample, 08025 Barcelona",
+    "address": "Carrer del Rosselló, 328, 08025 Barcelona",
     "mapUrl": "https://www.google.com/maps?q=41.3874,2.1686&z=15&output=embed"
+  },
+  "location2": {
+    "name": "Centre Cívic Pati Llimona",
+    "url": "https://patillimona.net/",
+    "address": "Carrer del Regomir, 3, 08002 Barcelona",
+    "mapUrl": "https://www.google.com/maps?q=41.3817864,2.1791673&z=15&output=embed"
   },
   "contact": {
     "email": "contacto@cinelabcn.com",
