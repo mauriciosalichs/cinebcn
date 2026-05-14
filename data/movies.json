@@ -20,7 +20,8 @@
       "imdbRating": "6.8",
       "imdbVotes": "9,550",
       "screeningDate": "2026-03-07",
-      "screeningTime": "17:30"
+      "screeningTime": "17:30",
+      "place": "location1"
     },
     {
       "id": 2,
@@ -42,7 +43,31 @@
       "imdbRating": "7.9",
       "imdbVotes": "28,984",
       "screeningDate": "2026-04-11",
-      "screeningTime": "11:00"
+      "screeningTime": "11:00",
+      "place": "location1"
+    },
+    {
+      "id": 3,
+      "Title": "Mariposas Verdes",
+      "Year": "2017",
+      "Rated": "N/A",
+      "Released": "20 Jul 2017",
+      "Runtime": "101 min",
+      "Genre": "Drama",
+      "Director": "Gustavo Nieto Roa",
+      "Writer": "Katalina Boham, Gustavo Nieto Roa, Mauricio Pichardo",
+      "Actors": "Deivi Duarte, Kevin Bury, Cecilia Suárez",
+      "Plot": "Mateo an intelligent and popular school-boy falls in love with Daniel, but when that relationship is made public, Mateo is at a crossroads, and will have to decide between fighting his adversaries, or giving up everything.",
+      "PlotES": "Mateo, un inteligente y popular estudiante, se enamora de Daniel, pero cuando esa relación se hace pública, Mateo se encuentra en una encrucijada y tendrá que decidir entre luchar contra sus adversarios o renunciar a todo.",
+      "Language": "Spanish",
+      "Country": "Colombia",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZTU2NmNiMTktYmNkYi00NDE1LWFmZjktOTZmMTdiZDg4ZGU3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": "N/A",
+      "imdbRating": "5.7",
+      "imdbVotes": "745",
+      "screeningDate": "2026-05-22",
+      "screeningTime": "18:15",
+      "place": "location2"
     }
   ]
 }
