@@ -364,15 +364,17 @@ body {
 
 .about-item {
     padding: 2rem;
-    background: var(--item-bg);
+    background: rgba(0, 0, 0, 0.38);
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .about-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    background: rgba(0, 0, 0, 0.48);
 }
 
 .about-item h3 {
@@ -382,7 +384,7 @@ body {
 }
 
 .about-item p {
-    color: var(--text-gray);
+    color: var(--text-light);
     line-height: 1.8;
 }
 
@@ -517,13 +519,13 @@ body {
 }
 
 .movie-card-year {
-    color: var(--text-gray);
+    color: var(--text-light);
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 
 .movie-card-director {
-    color: var(--text-gray);
+    color: var(--text-light);
     font-size: 0.9rem;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -594,7 +596,7 @@ body {
     flex-wrap: wrap;
     margin-bottom: 1rem;
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: var(--text-light);
 }
 
 .movie-list-meta strong {
@@ -602,7 +604,7 @@ body {
 }
 
 .movie-list-plot {
-    color: var(--text-gray);
+    color: var(--text-light);
     line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -773,7 +775,7 @@ body {
 
 .movie-meta p {
     margin-bottom: 0.5rem;
-    color: var(--text-gray);
+    color: var(--text-light);
 }
 
 .movie-meta strong {
@@ -791,7 +793,7 @@ body {
 }
 
 .movie-plot p {
-    color: var(--text-gray);
+    color: var(--text-light);
     line-height: 1.8;
 }
 
@@ -996,14 +998,14 @@ body {
 }
 
 .location-description {
-    color: var(--text-gray);
+    color: var(--text-light);
     font-size: 0.95rem;
     margin: 0 0 0.25rem;
 }
 
 .location-item {
-    background: var(--item-bg);
     padding: 1.25rem 1.5rem;
+    background: rgba(0, 0, 0, 0.38);
     border-radius: 10px;
     box-shadow: var(--shadow);
     display: flex;
@@ -1011,7 +1013,7 @@ body {
     align-items: flex-start;
     cursor: pointer;
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
-    border: 2px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .location-item.active,
@@ -1030,11 +1032,11 @@ body {
 .location-item h3 {
     font-size: 1rem;
     margin: 0 0 0.25rem;
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .location-item h3 a {
-    color: inherit;
+    color: var(--text-light);
     text-decoration: none;
 }
 
@@ -1044,7 +1046,7 @@ body {
 }
 
 .location-item p {
-    color: var(--text-gray);
+    color: var(--text-light);
     font-size: 0.88rem;
     margin: 0;
 }
@@ -1135,11 +1137,12 @@ body {
     gap: 2rem;
     margin-top: 2rem;
 }
-
+    
 .contact-form {
-    background: var(--item-bg);
+    background: rgba(0, 0, 0, 0.38);
     padding: 2rem;
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: var(--shadow);
 }
 
@@ -1198,9 +1201,10 @@ body {
 }
 
 .contact-item {
-    background: var(--item-bg);
+    background: rgba(0, 0, 0, 0.38);
     padding: 1.5rem;
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: var(--shadow);
     display: flex;
     gap: 1rem;
@@ -1216,7 +1220,7 @@ body {
 
 .contact-item h3 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .contact-item p {
@@ -1856,3 +1860,145 @@ html.techno-theme {
 .past-movies-section.hidden {
     display: none;
 }
+/* =============================================
+   GLOBAL UI POLISH (added for UX refresh)
+   Smoother transitions, robust hovers, accessible
+   focus, responsive niceties across all subpages.
+   ============================================= */
+
+/* Predictable, springy transition curve reused everywhere */
+:root {
+    --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-pop:      cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Honour reduced-motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Accessible focus ring (keyboard only) */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+button, a, input, textarea, select { outline: none; }
+
+/* Buttons: consistent press-feedback without layout shift */
+.cta-button,
+.submit-btn,
+.view-btn,
+.filter-reset,
+.btn-signup-movie,
+.calendar-nav-btn,
+.past-movies-toggle,
+.lang-btn {
+    transition: transform 0.25s var(--ease-out-soft),
+                box-shadow 0.25s var(--ease-out-soft),
+                background-color 0.25s var(--ease-out-soft),
+                color 0.25s var(--ease-out-soft),
+                border-color 0.25s var(--ease-out-soft),
+                opacity 0.25s var(--ease-out-soft);
+    will-change: transform;
+}
+.cta-button:active,
+.submit-btn:active,
+.view-btn:active,
+.filter-reset:active,
+.btn-signup-movie:active,
+.calendar-nav-btn:active,
+.lang-btn:active {
+    transform: translateY(1px) scale(0.985);
+}
+
+/* Cards: align hover transform with a smooth fall-off */
+.movie-card,
+.movie-list-item,
+.about-item,
+.calendar-movie-card,
+.location-item,
+.contact-item,
+.screening-item {
+    transition: transform 0.35s var(--ease-out-soft),
+                box-shadow 0.35s var(--ease-out-soft),
+                border-color 0.25s var(--ease-out-soft),
+                background-color 0.25s var(--ease-out-soft);
+    will-change: transform;
+}
+
+/* Modal: smooth open/close (works for any .modal opened by removing
+   `.hidden`). We render via opacity + scale so layout is never jolted. */
+.modal {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+.modal.hidden {
+    /* keep the !important display:none from before but pre-animate state */
+    opacity: 0;
+}
+.modal .modal-content,
+.modal-content {
+    transform: scale(1) translateY(0);
+    transition: transform 0.35s var(--ease-pop), opacity 0.3s ease;
+    animation: modal-pop-in 0.35s var(--ease-pop);
+}
+@keyframes modal-pop-in {
+    from { opacity: 0; transform: scale(0.94) translateY(14px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Modal close button: rotate in place (transform-origin fix) */
+.modal-close {
+    transform-origin: 50% 50%;
+    transition: transform 0.3s var(--ease-pop),
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+.modal-close:hover {
+    transform: rotate(90deg) scale(1.08);
+}
+
+/* Forms: cleaner focus & filled states */
+input, textarea, select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+
+/* Images don't break layout when broken */
+img { max-width: 100%; }
+
+/* Robust container padding on small screens */
+@media (max-width: 480px) {
+    .section { padding: 3rem 0.85rem; }
+    .container { padding: 0 0.25rem; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content p  { font-size: 1rem; }
+    .modal { padding: 0.5rem; }
+    .modal-content { border-radius: 12px; }
+    .footer { padding: 1.5rem 1rem; }
+    .footer-legal-links { gap: 0.35rem; font-size: 0.78rem; }
+    .social-link { width: 42px; height: 42px; font-size: 1.2rem; }
+}
+
+/* Tablet/intermediate sizing for the hero */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .hero-content h1 { font-size: clamp(3rem, 8vw, 6rem); }
+}
+
+/* Ensure long titles never overflow horizontally on any screen */
+.hero-content h1,
+.section h2,
+.movie-card-title,
+.modal h2 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Smooth horizontal section centering on very wide screens */
+.section { width: 100%; }

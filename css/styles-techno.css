@@ -527,15 +527,17 @@ body {
     background: var(--item-bg);
     border: 1px solid var(--border-color);
     padding: 1.5rem;
-    border-radius: 0;
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .filter-input,
+    border: 1px solid rgba(0, 229, 255, 0.1);
 .filter-select {
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 0;
     font-family: var(--font-body);
+    background: rgba(0, 0, 0, 0.58);
     font-size: 0.9rem;
     background: #0a0a0a;
     color: var(--text-light);
@@ -2072,3 +2074,104 @@ body::after {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
 }
+
+/* =============================================
+   GLOBAL UI POLISH — techno theme
+   ============================================= */
+:root {
+    --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-pop:      cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:focus-visible {
+    outline: 1px solid var(--primary-color);
+    outline-offset: 3px;
+}
+button, a, input, textarea, select { outline: none; }
+
+.cta-button,
+.submit-btn,
+.view-btn,
+.filter-reset,
+.btn-signup-movie,
+.calendar-nav-btn,
+.past-movies-toggle,
+.lang-btn {
+    transition: transform 0.25s var(--ease-out-soft),
+                box-shadow 0.25s var(--ease-out-soft),
+                background-color 0.25s var(--ease-out-soft),
+                color 0.25s var(--ease-out-soft),
+                border-color 0.25s var(--ease-out-soft),
+                opacity 0.25s var(--ease-out-soft);
+}
+.cta-button:active,
+.submit-btn:active,
+.view-btn:active,
+.filter-reset:active,
+.btn-signup-movie:active,
+.calendar-nav-btn:active,
+.lang-btn:active {
+    transform: translateY(1px) scale(0.985);
+}
+
+.movie-card,
+.movie-list-item,
+.about-item,
+.calendar-movie-card,
+.location-item,
+.contact-item,
+.screening-item {
+    transition: transform 0.35s var(--ease-out-soft),
+                box-shadow 0.35s var(--ease-out-soft),
+                border-color 0.25s var(--ease-out-soft),
+                background-color 0.25s var(--ease-out-soft);
+}
+
+.modal { transition: opacity 0.25s ease; }
+.modal.hidden { opacity: 0; }
+.modal-content {
+    animation: modal-pop-in 0.35s var(--ease-pop);
+}
+@keyframes modal-pop-in {
+    from { opacity: 0; transform: scale(0.94) translateY(14px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-close {
+    transform-origin: 50% 50%;
+    transition: transform 0.3s var(--ease-pop),
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+.modal-close:hover { transform: rotate(90deg) scale(1.08); }
+
+img { max-width: 100%; }
+
+@media (max-width: 480px) {
+    .section { padding: 3rem 0.85rem; }
+    .container { padding: 0 0.25rem; }
+    .hero-content h1 { font-size: 2rem; letter-spacing: 4px; }
+    .hero-content p  { font-size: 0.85rem; letter-spacing: 2px; }
+    .modal { padding: 0.5rem; }
+    .footer { padding: 1.5rem 1rem; }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+    .hero-content h1 { font-size: clamp(2.4rem, 7vw, 5rem); }
+}
+
+.hero-content h1,
+.section h2,
+.movie-card-title,
+.modal h2 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+.section { width: 100%; }
