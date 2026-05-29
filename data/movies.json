@@ -68,6 +68,29 @@
       "screeningDate": "2026-05-22",
       "screeningTime": "18:15",
       "place": "location2"
+    },
+    {
+      "id": 1,
+      "Title": "Sueño en Otro Idioma",
+      "Year": "2017",
+      "Rated": "Unrated",
+      "Released": "28 Jul 2017",
+      "Runtime": "103 min",
+      "Genre": "Drama, Fantasy, Romance",
+      "Director": "Ernesto Contreras",
+      "Writer": "Carlos Contreras",
+      "Actors": "Fernando Álvarez Rebeil, José Manuel Poncelis, Eligio Meléndez",
+      "Plot": "When a language dies, a unique vision of the world is lost forever.",
+      "PlotES": "Cuando un idioma muere, una visión única del mundo se pierde para siempre.",
+      "Language": "Spanish, English",
+      "Country": "Mexico, Netherlands",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZjg4YThmZDQtZmY2My00MThlLTgxMTItZDgzMmQyNDNhYzhmXkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": "64",
+      "imdbRating": "7.4",
+      "imdbVotes": "4,503",
+      "screeningDate": "03/06/2026",
+      "screeningTime": "18:15",
+      "place": "location2"
     }
   ]
 }
